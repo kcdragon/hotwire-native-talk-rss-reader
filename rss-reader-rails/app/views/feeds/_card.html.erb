@@ -1,0 +1,25 @@
+<%# locals(feed:) %>
+
+<div class="card">
+  <header>
+    <%= render "feeds/image", feed: feed %>
+    <h3 class="font-semibold text-lg">
+      <% if current_page?(feed_path(feed)) %>
+        <%= feed.title || "Untitled Feed" %>
+      <% else %>
+        <%= link_to feed.title || "Untitled Feed", feed_path(feed), class: "hover:underline" %>
+      <% end %>
+    </h3>
+  </header>
+
+  <section>
+    <% if feed.description.present? %>
+      <p class="text-muted-foreground"><%= feed.description %></p>
+    <% end %>
+    <p class="text-sm text-muted-foreground mt-2"><%= feed.rss_url %></p>
+  </section>
+
+  <footer>
+    <%= button_to "Delete", feed_path(feed), method: :delete, class: "btn-destructive", data: { turbo_confirm: "Are you sure?" } %>
+  </footer>
+</div>

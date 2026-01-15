@@ -1,0 +1,14 @@
+<%= form_with(
+  url: google_oauth_sessions_path, 
+  method: :post, 
+  data: { 
+    turbo: hotwire_native_app?, 
+    controller: "bridge--sign-in-with-oauth", 
+    action: "submit->bridge--sign-in-with-oauth#interceptSubmit", 
+    bridge__sign_in_with_oauth_start_path_value: new_google_oauth_sessions_path(platform: "native"),
+    bridge__sign_in_with_oauth_token_auth_path_value: authenticate_by_token_google_oauth_sessions_path
+  }) do |form| %>
+  <!-- This form will only be submitted on the web -->
+  <%= form.hidden_field :platform, value: "web" %>
+  <%= form.submit "Sign in with Google", class: "btn-outline w-full" %>
+<% end %>

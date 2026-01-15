@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<%= tag.html(
+  data: {
+    rails_env: Rails.env,
+    hotwire_native: hotwire_native_app?,
+    hotwire_native_android: android_app?,
+    hotwire_native_ios: ios_app?,
+  },
+) do %>
+  <head>
+    <title><%= content_for(:title) || "RSS Reader" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="RSS Reader">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= turbo_refreshes_with method: :morph, scroll: :preserve %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body data-controller="<%= authenticated? ? "sidebar theme" : "theme" %>">
+    <% if authenticated? %>
+      <aside class="sidebar" data-sidebar-target="sidebar" data-sidebar-initial-mobile-open-value="false" data-action="click->sidebar#handleClick" aria-hidden="false">
+        <nav aria-label="Sidebar navigation">
+          <section class="scrollbar">
+            <div role="group">
+              <ul>
+                <li>
+                  <%= link_to "Feeds", feeds_path %>
+                </li>
+
+                <li>
+                  <%= link_to "Entries", entries_path %>
+                </li>
+
+                <% if current_user.guest? %>
+                  <li>
+                    <%= link_to "Create Account", new_guest_registration_path %>
+                  </li>
+                <% else %>
+                  <li>
+                    <%= link_to "Account Settings", edit_user_path %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+          </section>
+          <footer>
+            <div role="group">
+              <ul>
+                <li>
+                  <%= button_to "Sign out", session_path, method: :delete, class: "btn-ghost w-full" %>
+                </li>
+              </ul>
+            </div>
+          </footer>
+        </nav>
+      </aside>
+    <% end %>
+
+    <main>
+      <% if authenticated? %>
+        <header class="hotwire-native:hidden flex justify-between items-center gap-2 border-b h-14 px-4 z-10 w-full">
+          <button type="button" class="btn-sm-icon-ghost mr-auto size-7 -ml-1.5" data-action="click->sidebar#toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path></svg>
+          </button>
+        </header>
+
+        <% if current_user.guest? %>
+          <div class="bg-muted border-b px-4 py-3">
+            <div class="flex items-center justify-between gap-4">
+              <p class="text-sm text-muted-foreground">
+                You're using a guest account. <%= link_to "Create an account", new_guest_registration_path, class: "underline underline-offset-4 hover:text-foreground" %> to save your feeds permanently.
+              </p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+
+      <%= yield %>
+    </main>
+
+    <%= render "shared/theme_toggle" %>
+
+    <div id="toaster" class="toaster" data-align="end">
+      <%= render "shared/flash_toasts" %>
+    </div>
+  </body>
+<% end %>

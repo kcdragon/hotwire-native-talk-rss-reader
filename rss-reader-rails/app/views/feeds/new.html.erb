@@ -1,0 +1,36 @@
+<%= content_for :title, "Add New Feed" %>
+
+<div class="max-w-4xl mx-auto p-6 space-y-6">
+  <h1 class="hotwire-native:hidden text-2xl font-bold mb-6">Add New Feed</h1>
+
+  <%= form_with model: @feed, url: feeds_path, class: "form space-y-4" do |form| %>
+    <% if @feed.errors.any? %>
+      <div class="alert alert-destructive">
+        <h2>
+          <%= pluralize(@feed.errors.count, "error") %> prohibited this feed
+          from being saved:
+        </h2>
+        <section>
+          <ul>
+            <% @feed.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </section>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :rss_url, "RSS Feed URL", class: "label" %>
+      <%= form.url_field :rss_url, 
+          placeholder: "https://example.com/rss", 
+          class: "input",
+          required: true %>
+    </div>
+
+    <div class="flex gap-3">
+      <%= form.submit "Create Feed", class: "btn-primary" %>
+      <%= link_to "Cancel", root_path, class: "btn-outline" %>
+    </div>
+  <% end %>
+</div>

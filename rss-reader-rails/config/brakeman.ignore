@@ -1,0 +1,51 @@
+{
+  "ignored_warnings": [
+    {
+      "warning_type": "Redirect",
+      "warning_code": 18,
+      "fingerprint": "1809294bdd474548f99c50cd6fce2bf2e72db96fc8fa26f84ccafb21b1c2d1a1",
+      "check_name": "Redirect",
+      "message": "Possible unprotected redirect",
+      "file": "app/controllers/google_oauth_sessions_controller.rb",
+      "line": 54,
+      "link": "https://brakemanscanner.org/docs/warning_types/redirect/",
+      "code": "redirect_to(\"untitledrssreader://auth-callback?token=#{OauthUserService.find_or_create(:oauth_provider => :google, :current_user => (authenticated? ? (current_user) : (nil)), :uid => GoogleOauthClient.new.authenticate(:code => params[:code], :redirect_uri => callback_google_oauth_sessions_url)[:uid], :email => GoogleOauthClient.new.authenticate(:code => params[:code], :redirect_uri => callback_google_oauth_sessions_url)[:email]).signed_id(:purpose => :native_auth, :expires_in => 5.minutes)}&platform=#{\"native\"}\", :allow_other_host => true)",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "GoogleOauthSessionsController",
+        "method": "callback"
+      },
+      "user_input": "OauthUserService.find_or_create(:oauth_provider => :google, :current_user => (authenticated? ? (current_user) : (nil)), :uid => GoogleOauthClient.new.authenticate(:code => params[:code], :redirect_uri => callback_google_oauth_sessions_url)[:uid], :email => GoogleOauthClient.new.authenticate(:code => params[:code], :redirect_uri => callback_google_oauth_sessions_url)[:email]).signed_id(:purpose => :native_auth, :expires_in => 5.minutes)",
+      "confidence": "Weak",
+      "cwe_id": [
+        601
+      ],
+      "note": "This isn't an issue since this code always uses untitledrssreader://auth-callback as the redirect URI path."
+    },
+    {
+      "warning_type": "Redirect",
+      "warning_code": 18,
+      "fingerprint": "345554490c5ba94f2ab47368255bb455ab61b297ccd694dcacba626fbeea4f28",
+      "check_name": "Redirect",
+      "message": "Possible unprotected redirect",
+      "file": "app/controllers/apple_oauth_sessions_controller.rb",
+      "line": 26,
+      "link": "https://brakemanscanner.org/docs/warning_types/redirect/",
+      "code": "redirect_to(AppleOauthClient.new.authorization_url(:state => ((SecureRandom.hex(24) + \":\") + params[:platform]), :nonce => SecureRandom.urlsafe_base64(16), :redirect_uri => callback_apple_oauth_sessions_url), :allow_other_host => true)",
+      "render_path": null,
+      "location": {
+        "type": "method",
+        "class": "AppleOauthSessionsController",
+        "method": "create"
+      },
+      "user_input": "AppleOauthClient.new.authorization_url(:state => ((SecureRandom.hex(24) + \":\") + params[:platform]), :nonce => SecureRandom.urlsafe_base64(16), :redirect_uri => callback_apple_oauth_sessions_url)",
+      "confidence": "Weak",
+      "cwe_id": [
+        601
+      ],
+      "note": "This isn't an issue since this method always uses https://appleid.apple.com/auth/authorize as the host and path."
+    }
+  ],
+  "brakeman_version": "7.1.2"
+}

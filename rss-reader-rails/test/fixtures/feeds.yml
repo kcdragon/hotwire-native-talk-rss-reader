@@ -1,0 +1,5 @@
+one:
+  user: one
+  title: "Example Feed"
+  description: "An example RSS feed"
+  rss_url: "https://example.com/feed.xml"

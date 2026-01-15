@@ -1,0 +1,62 @@
+<%= content_for :title, "Account Settings" %>
+
+<div class="max-w-4xl mx-auto p-6 space-y-6">
+  <h1 class="hotwire-native:hidden text-2xl font-bold">Account Settings</h1>
+
+  <div class="grid gap-8">
+    <div class="border rounded-lg p-6">
+      <h2 class="font-semibold text-xl mb-4">Change Email Address</h2>
+
+      <% if @user.oauth_provider.present? %>
+        <p class="text-sm text-gray-500">
+          You are signed in with <%= @user.oauth_provider.humanize %>. You cannot change your email address.
+        </p>
+      <% else %>
+        <%= form_with model: @user, url: user_path, method: :patch, class: "form grid gap-6" do |form| %>
+          <div class="grid gap-2">
+            <%= form.label :email_address, "New Email Address" %>
+            <%= form.email_field :email_address, required: true, autocomplete: "email", value: @user.email_address %>
+          </div>
+
+          <div class="grid gap-2">
+            <%= form.label :current_password, "Current Password" %>
+            <%= form.password_field :current_password, required: true, autocomplete: "current-password" %>
+          </div>
+
+          <%= form.submit "Update Email", class: "btn w-full" %>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="border rounded-lg p-6">
+      <h2 class="font-semibold text-xl mb-4">Change Password</h2>
+
+      <% if @user.oauth_provider.present? %>
+        <p class="text-sm text-gray-500">
+          You are signed in with <%= @user.oauth_provider.humanize %>. You cannot change your password.
+        </p>
+      <% else %>
+        <%= form_with model: @user, url: user_path, method: :patch, class: "form grid gap-6" do |form| %>
+          <div class="grid gap-2">
+            <%= form.label :current_password, "Current Password" %>
+            <%= form.password_field :current_password, required: true, autocomplete: "current-password" %>
+          </div>
+
+          <div class="grid gap-2">
+            <%= form.label :password, "New Password" %>
+            <%= form.password_field :password, required: true, autocomplete: "new-password" %>
+          </div>
+
+          <div class="grid gap-2">
+            <%= form.label :password_confirmation, "Confirm New Password" %>
+            <%= form.password_field :password_confirmation, required: true, autocomplete: "new-password" %>
+          </div>
+
+          <%= form.submit "Update Password", class: "btn w-full" %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <%= button_to "Sign out", session_path, method: :delete, class: "btn-destructive w-full", data: { turbo_confirm: "Are you sure you want to sign out?", turbo_frame: :_top } %>
+</div>

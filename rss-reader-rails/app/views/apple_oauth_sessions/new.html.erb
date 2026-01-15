@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<%= tag.html(
+  data: {
+    rails_env: Rails.env,
+    hotwire_native: hotwire_native_app?,
+    hotwire_native_android: android_app?,
+    hotwire_native_ios: ios_app?,
+  },
+) do %>
+<head>
+  <title>Redirecting to Apple Sign In...</title>
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
+<body>
+  <p>Redirecting to Apple Sign In...</p>
+
+  <%= form_with(
+    url: apple_oauth_sessions_path,
+    method: :post,
+    data: {
+      controller: "form-submit",
+      turbo: false # OAuth providers don't allow requests over JavaScript
+    }) do |form| %>
+    <%= form.hidden_field :platform, value: params[:platform] %>
+  <% end %>
+</body>
+<% end %>

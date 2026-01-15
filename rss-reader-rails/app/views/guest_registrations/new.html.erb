@@ -1,0 +1,50 @@
+<%= content_for :title, "Create Your Account" %>
+
+<div class="mx-auto mt-28 px-5 md:w-2/3 w-full grid gap-6">
+  <h1 class="hotwire-native:hidden font-bold text-4xl">Create Your Account</h1>
+
+  <p class="text-muted-foreground">
+    Add an email and password to save your feeds and access them from any device.
+  </p>
+
+  <%= form_with url: guest_registration_path, scope: :user, class: "form grid gap-6" do |form| %>
+    <% if @user.errors.any? %>
+      <div class="bg-destructive/10 text-destructive p-4 rounded-lg">
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="grid gap-2">
+      <%= form.label :email_address, "Email" %>
+      <%= form.email_field :email_address, required: true, autocomplete: "username" %>
+    </div>
+
+    <div class="grid gap-2">
+      <%= form.label :password, "Password" %>
+      <%= form.password_field :password, required: true, autocomplete: "new-password" %>
+    </div>
+
+    <div class="grid gap-2">
+      <%= form.label :password_confirmation, "Confirm Password" %>
+      <%= form.password_field :password_confirmation, required: true, autocomplete: "new-password" %>
+    </div>
+
+    <%= form.submit "Create Account", class: "btn w-full" %>
+  <% end %>
+
+  <div class="relative">
+    <div class="absolute inset-0 flex items-center">
+      <span class="w-full border-t"></span>
+    </div>
+    <div class="relative flex justify-center text-xs uppercase">
+      <span class="bg-background px-2 text-muted-foreground">Or continue with</span>
+    </div>
+  </div>
+
+  <%= render "shared/sign_in_with_apple" %>
+  <%= render "shared/sign_in_with_google" %>
+</div>

@@ -1,0 +1,74 @@
+{
+  "settings": {
+
+  },
+  "rules": [
+    {
+      "patterns": [
+        ".*"
+      ],
+      "properties": {
+        "context": "default",
+        "pull_to_refresh_enabled": true
+      }
+    },
+    {
+      "patterns": [
+        "/new$",
+        "/edit$"
+      ],
+      "properties": {
+        "context": "modal",
+        "pull_to_refresh_enabled": false
+      }
+    },
+    {
+      "patterns": [
+        "/user/edit"
+      ],
+      "properties": {
+        "context": "default",
+        "pull_to_refresh_enabled": true
+      }
+    },
+    {
+      "patterns": [
+        "/feeds$",
+        "/entries$",
+        "/user/edit"
+      ],
+      "properties": {
+        "presentation": "replace_root",
+        "animated": false
+      }
+    },
+    {
+      "patterns": [
+        "/session/new",
+        "/registration/new"
+      ],
+      "properties": {
+        "context": "default",
+        "pull_to_refresh_enabled": true
+      }
+    },
+    {
+      "patterns": [
+        "/welcome"
+      ],
+      "properties": {
+        "presentation": "replace_root",
+        "animated": false
+      }
+    },
+    {
+      "patterns": [
+        "/hotwire_native/refresh"
+      ],
+      "properties": {
+        "presentation": "refresh",
+        "view_controller": "refresh_app"
+      }
+    }
+  ]
+}

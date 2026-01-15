@@ -1,0 +1,7 @@
+one:
+  feed: one
+  title: "First Entry"
+  url: "https://example.com/first-entry"
+  published_at: <%= 1.day.ago %>
+  read_at: null
+  liked_at: null

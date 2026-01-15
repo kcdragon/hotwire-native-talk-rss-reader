@@ -1,0 +1,25 @@
+<%= content_for :title, "Your Feeds" %>
+
+<div class="max-w-4xl mx-auto p-6 space-y-6">
+  <div class="flex justify-between items-center">
+    <h1 class="hotwire-native:hidden text-2xl font-bold">Your Feeds</h1>
+    <%= link_to "Add Feed", new_feed_path,
+      class: "hotwire-native:hidden btn-primary",
+      data: {
+        controller: "bridge--button",
+        bridge_title: "Add Feed",
+      } %>
+  </div>
+
+  <% if @feeds.any? %>
+    <div class="space-y-4">
+      <% @feeds.each do |feed| %>
+        <%= render "feeds/card", feed: feed %>
+      <% end %>
+    </div>
+  <% else %>
+    <p class="text-muted-foreground text-center md:text-left">
+      You haven't added any feeds yet.
+    </p>
+  <% end %>
+</div>

@@ -1,0 +1,21 @@
+<div class="min-h-dvh flex items-center justify-center px-4 md:py-12">
+  <div class="max-w-md w-full text-center space-y-8">
+    <div class="space-y-4">
+      <h1 class="font-bold text-5xl md:text-6xl">Welcome</h1>
+      <p class="text-xl text-muted-foreground">
+        Stay updated with your favorite RSS feeds
+      </p>
+    </div>
+
+    <div class="space-y-3 pt-8">
+      <%= link_to "Sign up", new_registration_path, class: "btn w-full text-lg py-6" %>
+      <%= link_to "Sign in", new_session_path, class: "btn-outline w-full text-lg py-6" %>
+      <%= button_to "Continue as Guest", guest_user_path, class: "btn-ghost w-full text-lg py-6" %>
+    </div>
+
+    <div class="pt-6 space-y-3 text-sm text-muted-foreground">
+      <p>Read and organize your RSS feeds in one place</p>
+      <p>Mark articles as read, like your favorites, and more</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<%= content_for :title, "Forgot your password?" %>
+
+<div class="mx-auto mt-28 px-5 md:w-2/3 w-full grid gap-6">
+  <h1 class="hotwire-native:hidden font-bold text-4xl">Forgot your password?</h1>
+
+  <%= form_with url: passwords_path, class: "form grid gap-6" do |form| %>
+    <div class="grid gap-2">
+      <%= form.label :email_address, "Email" %>
+      <%= form.email_field :email_address, required: true, autocomplete: "username", value: params[:email_address] %>
+    </div>
+
+    <%= form.submit "Email reset instructions", class: "btn w-full" %>
+  <% end %>
+</div>

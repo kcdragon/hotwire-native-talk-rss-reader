@@ -1,0 +1,7 @@
+<%# locals(entry:) %>
+
+<% if entry.image_url.present? %>
+  <%= image_tag entry.image_url, alt: entry.title, class: "mb-2 w-24 h-auto" %>
+<% else %>
+  <%= render "feeds/image", feed: entry.feed %>
+<% end %>

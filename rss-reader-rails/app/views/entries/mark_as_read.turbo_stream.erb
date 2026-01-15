@@ -1,0 +1,3 @@
+<%= turbo_stream.replace dom_id(@entry, :card) do %>
+  <%= render "entries/card", entry: @entry %>
+<% end %>

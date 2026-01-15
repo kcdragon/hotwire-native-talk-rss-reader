@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2952ED5B2ED2A02E00D29642 /* HotwireNative in Frameworks */ = {isa = PBXBuildFile; productRef = 2952ED5A2ED2A02E00D29642 /* HotwireNative */; };
+		2952EDDE2ED8BE9100D29642 /* BridgeComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 2952EDDD2ED8BE9100D29642 /* BridgeComponents */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		29A3ECB72ED29FE300E54DEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29A3EC982ED29FE200E54DEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29A3EC9F2ED29FE200E54DEA;
+			remoteInfo = RSSReader;
+		};
+		29A3ECC12ED29FE300E54DEA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29A3EC982ED29FE200E54DEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29A3EC9F2ED29FE200E54DEA;
+			remoteInfo = RSSReader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		29A3ECA02ED29FE200E54DEA /* RSSReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A3ECB62ED29FE300E54DEA /* RSSReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A3ECC02ED29FE300E54DEA /* RSSReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		29A3ECC82ED29FE300E54DEA /* Exceptions for "RSSReader" folder in "RSSReader" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 29A3EC9F2ED29FE200E54DEA /* RSSReader */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		29A3ECA22ED29FE200E54DEA /* RSSReader */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				29A3ECC82ED29FE300E54DEA /* Exceptions for "RSSReader" folder in "RSSReader" target */,
+			);
+			path = RSSReader;
+			sourceTree = "<group>";
+		};
+		29A3ECB92ED29FE300E54DEA /* RSSReaderTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RSSReaderTests;
+			sourceTree = "<group>";
+		};
+		29A3ECC32ED29FE300E54DEA /* RSSReaderUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RSSReaderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29A3EC9D2ED29FE200E54DEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2952ED5B2ED2A02E00D29642 /* HotwireNative in Frameworks */,
+				2952EDDE2ED8BE9100D29642 /* BridgeComponents in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A3ECB32ED29FE300E54DEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A3ECBD2ED29FE300E54DEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29A3EC972ED29FE200E54DEA = {
+			isa = PBXGroup;
+			children = (
+				29A3ECA22ED29FE200E54DEA /* RSSReader */,
+				29A3ECB92ED29FE300E54DEA /* RSSReaderTests */,
+				29A3ECC32ED29FE300E54DEA /* RSSReaderUITests */,
+				29A3ECA12ED29FE200E54DEA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		29A3ECA12ED29FE200E54DEA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29A3ECA02ED29FE200E54DEA /* RSSReader.app */,
+				29A3ECB62ED29FE300E54DEA /* RSSReaderTests.xctest */,
+				29A3ECC02ED29FE300E54DEA /* RSSReaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29A3EC9F2ED29FE200E54DEA /* RSSReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29A3ECC92ED29FE300E54DEA /* Build configuration list for PBXNativeTarget "RSSReader" */;
+			buildPhases = (
+				29A3EC9C2ED29FE200E54DEA /* Sources */,
+				29A3EC9D2ED29FE200E54DEA /* Frameworks */,
+				29A3EC9E2ED29FE200E54DEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				29A3ECA22ED29FE200E54DEA /* RSSReader */,
+			);
+			name = RSSReader;
+			packageProductDependencies = (
+				2952ED5A2ED2A02E00D29642 /* HotwireNative */,
+				2952EDDD2ED8BE9100D29642 /* BridgeComponents */,
+			);
+			productName = RSSReader;
+			productReference = 29A3ECA02ED29FE200E54DEA /* RSSReader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		29A3ECB52ED29FE300E54DEA /* RSSReaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29A3ECCE2ED29FE300E54DEA /* Build configuration list for PBXNativeTarget "RSSReaderTests" */;
+			buildPhases = (
+				29A3ECB22ED29FE300E54DEA /* Sources */,
+				29A3ECB32ED29FE300E54DEA /* Frameworks */,
+				29A3ECB42ED29FE300E54DEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29A3ECB82ED29FE300E54DEA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				29A3ECB92ED29FE300E54DEA /* RSSReaderTests */,
+			);
+			name = RSSReaderTests;
+			packageProductDependencies = (
+			);
+			productName = RSSReaderTests;
+			productReference = 29A3ECB62ED29FE300E54DEA /* RSSReaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		29A3ECBF2ED29FE300E54DEA /* RSSReaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29A3ECD12ED29FE300E54DEA /* Build configuration list for PBXNativeTarget "RSSReaderUITests" */;
+			buildPhases = (
+				29A3ECBC2ED29FE300E54DEA /* Sources */,
+				29A3ECBD2ED29FE300E54DEA /* Frameworks */,
+				29A3ECBE2ED29FE300E54DEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				29A3ECC22ED29FE300E54DEA /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				29A3ECC32ED29FE300E54DEA /* RSSReaderUITests */,
+			);
+			name = RSSReaderUITests;
+			packageProductDependencies = (
+			);
+			productName = RSSReaderUITests;
+			productReference = 29A3ECC02ED29FE300E54DEA /* RSSReaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29A3EC982ED29FE200E54DEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					29A3EC9F2ED29FE200E54DEA = {
+						CreatedOnToolsVersion = 26.0;
+					};
+					29A3ECB52ED29FE300E54DEA = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = 29A3EC9F2ED29FE200E54DEA;
+					};
+					29A3ECBF2ED29FE300E54DEA = {
+						CreatedOnToolsVersion = 26.0;
+						TestTargetID = 29A3EC9F2ED29FE200E54DEA;
+					};
+				};
+			};
+			buildConfigurationList = 29A3EC9B2ED29FE200E54DEA /* Build configuration list for PBXProject "RSSReader" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29A3EC972ED29FE200E54DEA;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2952ED592ED2A02E00D29642 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */,
+				2952EDDC2ED8BE9100D29642 /* XCRemoteSwiftPackageReference "bridge-components" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 29A3ECA12ED29FE200E54DEA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29A3EC9F2ED29FE200E54DEA /* RSSReader */,
+				29A3ECB52ED29FE300E54DEA /* RSSReaderTests */,
+				29A3ECBF2ED29FE300E54DEA /* RSSReaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29A3EC9E2ED29FE200E54DEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A3ECB42ED29FE300E54DEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A3ECBE2ED29FE300E54DEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29A3EC9C2ED29FE200E54DEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A3ECB22ED29FE300E54DEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29A3ECBC2ED29FE300E54DEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		29A3ECB82ED29FE300E54DEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29A3EC9F2ED29FE200E54DEA /* RSSReader */;
+			targetProxy = 29A3ECB72ED29FE300E54DEA /* PBXContainerItemProxy */;
+		};
+		29A3ECC22ED29FE300E54DEA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 29A3EC9F2ED29FE200E54DEA /* RSSReader */;
+			targetProxy = 29A3ECC12ED29FE300E54DEA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		29A3ECCA2ED29FE300E54DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GH8Z7V8X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RSSReader/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rowhomelabs.RSSReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		29A3ECCB2ED29FE300E54DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GH8Z7V8X;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = RSSReader/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rowhomelabs.RSSReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		29A3ECCC2ED29FE300E54DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 35GH8Z7V8X;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		29A3ECCD2ED29FE300E54DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 35GH8Z7V8X;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		29A3ECCF2ED29FE300E54DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GH8Z7V8X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rowhomelabs.RSSReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSSReader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RSSReader";
+			};
+			name = Debug;
+		};
+		29A3ECD02ED29FE300E54DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GH8Z7V8X;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rowhomelabs.RSSReaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RSSReader.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RSSReader";
+			};
+			name = Release;
+		};
+		29A3ECD22ED29FE300E54DEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GH8Z7V8X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rowhomelabs.RSSReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RSSReader;
+			};
+			name = Debug;
+		};
+		29A3ECD32ED29FE300E54DEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 35GH8Z7V8X;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rowhomelabs.RSSReaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RSSReader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29A3EC9B2ED29FE200E54DEA /* Build configuration list for PBXProject "RSSReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A3ECCC2ED29FE300E54DEA /* Debug */,
+				29A3ECCD2ED29FE300E54DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29A3ECC92ED29FE300E54DEA /* Build configuration list for PBXNativeTarget "RSSReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A3ECCA2ED29FE300E54DEA /* Debug */,
+				29A3ECCB2ED29FE300E54DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29A3ECCE2ED29FE300E54DEA /* Build configuration list for PBXNativeTarget "RSSReaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A3ECCF2ED29FE300E54DEA /* Debug */,
+				29A3ECD02ED29FE300E54DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		29A3ECD12ED29FE300E54DEA /* Build configuration list for PBXNativeTarget "RSSReaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29A3ECD22ED29FE300E54DEA /* Debug */,
+				29A3ECD32ED29FE300E54DEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2952ED592ED2A02E00D29642 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hotwired/hotwire-native-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
+		2952EDDC2ED8BE9100D29642 /* XCRemoteSwiftPackageReference "bridge-components" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joemasilotti/bridge-components";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2952ED5A2ED2A02E00D29642 /* HotwireNative */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2952ED592ED2A02E00D29642 /* XCRemoteSwiftPackageReference "hotwire-native-ios" */;
+			productName = HotwireNative;
+		};
+		2952EDDD2ED8BE9100D29642 /* BridgeComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2952EDDC2ED8BE9100D29642 /* XCRemoteSwiftPackageReference "bridge-components" */;
+			productName = BridgeComponents;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 29A3EC982ED29FE200E54DEA /* Project object */;
+}

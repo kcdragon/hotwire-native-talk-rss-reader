@@ -1,0 +1,49 @@
+<%# locals(entry:) %>
+
+<%= turbo_frame_tag dom_id(entry, :card) do %>
+  <div class="card <%= read_entry_classes if entry.read_at.present? %>" data-controller="entry">
+    <%= form_with url: mark_as_read_entry_path(entry), method: :patch, data: { entry_target: "markAsReadForm" }, style: "display: none;" do %>
+    <% end %>
+    <header>
+      <%= render "entries/image", entry: %>
+      <h3 class="font-semibold text-lg">
+        <% if entry.url.present? %>
+          <%= link_to entry.title, entry.url, target: "_blank", rel: "noopener noreferrer", class: "hover:underline", data: { action: "click->entry#markAsRead" } %>
+        <% else %>
+          <%= entry.title %>
+        <% end %>
+      </h3>
+    </header>
+
+    <section>
+      <% if entry.summary.present? %>
+        <p class="text-sm mb-2">
+          <%== sanitize(entry.summary) %>
+        </p>
+      <% end %>
+      <% if controller_name == "entries" %>
+        <p class="text-sm text-muted-foreground">
+          <%= link_to entry.feed.title, feed_path(entry.feed), class: "hover:underline", data: { turbo_frame: "_top" } %>
+        </p>
+      <% end %>
+      <% if entry.published_at.present? %>
+        <p class="text-sm text-muted-foreground" title="<%= entry.published_at.strftime("%B %d, %Y at %I:%M %p") %>">
+          <%= time_ago_in_words(entry.published_at) %> ago
+        </p>
+      <% end %>
+    </section>
+
+    <footer>
+      <%= button_to toggle_like_entry_path(entry), method: :patch, class: "btn-ghost" do %>
+        <% if entry.liked_at.present? %>
+          ♥
+        <% else %>
+          ♡
+        <% end %>
+      <% end %>
+      <% if entry.read_at.present? %>
+        <%= button_to "Mark as unread", mark_as_unread_entry_path(entry), method: :patch, class: "btn-ghost" %>
+      <% end %>
+    </footer>
+  </div>
+<% end %>

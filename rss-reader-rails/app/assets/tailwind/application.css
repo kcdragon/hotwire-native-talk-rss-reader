@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import "./basecoat.css";
+
+@variant hotwire-native {
+  html[data-hotwire-native="true"] & {
+    @slot
+  }
+}
+
+@variant not-hotwire-native {
+  html:not([data-hotwire-native="true"]) & {
+    @slot
+  }
+}
+
+@variant hotwire-native-android {
+  html[data-hotwire-native-android="true"] & {
+    @slot
+  }
+}
+
+@variant not-hotwire-native-android {
+  html:not([data-hotwire-native-android="true"]) & {
+    @slot
+  }
+}
+
+@variant hotwire-native-ios {
+  html[data-hotwire-native-ios="true"] & {
+    @slot
+  }
+}
+
+@variant not-hotwire-native-ios {
+  html:not([data-hotwire-native-ios="true"]) & {
+    @slot
+  }
+}
+
+[data-bridge-components~="menu"]
+[data-controller~="bridge--menu"] {
+  display: none;
+}

@@ -1,0 +1,40 @@
+<%= content_for :title, "Sign in" %>
+
+<div class="mx-auto mt-28 px-5 md:w-2/3 w-full grid gap-6">
+  <h1 class="hotwire-native:hidden font-bold text-4xl">Sign in</h1>
+
+  <%= form_with url: session_url, class: "form grid gap-6" do |form| %>
+    <div class="grid gap-2">
+      <%= form.label :email_address, "Email" %>
+      <%= form.email_field :email_address, required: true, autocomplete: "username", value: params[:email_address] %>
+    </div>
+
+    <div class="grid gap-2">
+      <div class="flex items-center gap-2">
+        <%= form.label :password, "Password" %>
+        <%= link_to "Forgot your password?", new_password_path, class: "ml-auto inline-block text-sm underline-offset-4 hover:underline", tabindex: "-1" %>
+      </div>
+      
+      <%= form.password_field :password, required: true, autocomplete: "current-password" %>
+    </div>
+
+    <%= form.submit "Sign in", class: "btn w-full" %>
+  <% end %>
+
+  <div class="relative">
+    <div class="absolute inset-0 flex items-center">
+      <span class="w-full border-t"></span>
+    </div>
+    <div class="relative flex justify-center text-xs uppercase">
+      <span class="bg-background px-2 text-muted-foreground">Or continue with</span>
+    </div>
+  </div>
+
+  <%= render "shared/sign_in_with_apple" %>
+  <%= render "shared/sign_in_with_google" %>
+
+  <p class="text-center text-sm text-muted-foreground">
+    Don't have an account?
+    <%= link_to "Sign up", new_registration_path, class: "underline-offset-4 hover:underline" %>
+  </p>
+</div>
