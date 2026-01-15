@@ -5,9 +5,10 @@ It's using during my [Hotwire Native talks](https://mikedalton.co/talks/).
 
 ## Architecture
 
-This repository contains the Hotwire-based Rails app.
-[kcdragon/rss-reader-android](https://github.com/kcdragon/rss-reader-android) contains the Android app.
-[kcdragon/rss-reader-ios](https://github.com/kcdragon/rss-reader-ios) contains the iOS app.
+This repository contains a Hotwire Native app.
+rss-reader-rails contains the Rails app.
+rss-reader-android contains the Android app.
+rss-reader-ios contains the iOS app.
 
 ## Setup
 
